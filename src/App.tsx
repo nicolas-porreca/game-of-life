@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import styles from './App.module.scss';
 import TextReader from './components/TextReader';
@@ -6,7 +6,6 @@ import { defaultMatrix } from './helpers/default-matrix';
 import { NEIGHBOURS_MATRIX } from './helpers/neighbours-matrix';
 import { GAME_SPEED } from './helpers/game-speeds';
 import { EDIT_MATRIX } from './helpers/edit-matrix';
-import { JsxElement } from 'typescript';
 
 // The main idea is to determine the number of cells by multiplying numberOfRows * numberOfCols and storing them into an array of JSX elements (matrix). The wrapper div is a css grid which uses the numberOfRows and numberOfCols to correctly display the elements of the matrix. We keep track of the alive cells in a separate structure (aliveCells), which is an array of strings that represent the coordinates of the alive cells in the format row|col. Since we know that for any given generation the only cells that can be affected are the neighbours of the currently alive cells, this approach should improve the application performances, since we can check a limited amount of cells instead of the whole matrix at every cycle.
 
