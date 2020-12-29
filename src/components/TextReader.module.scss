@@ -1,0 +1,56 @@
+.fileReader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed var(--color-active);
+    color: var(--color-active);
+
+    display: grid;
+    place-items: center;
+
+    &[data-disabled='true'] {
+        border: 2px dashed var(--color-disabled);
+        cursor: not-allowed;
+    }
+    &[data-disabled='false']:hover {
+        background-color: var(--color-active);
+        border: 2px solid var(--color-disabled);
+        color: var(--color-disabled);
+    }
+    &[data-invalid='true'] {
+        border: 2px dashed var(--color-invalid);
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &__messages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__hint {
+        display: block;
+        text-align: center;
+    }
+
+    &__invalid {
+        display: block;
+        text-align: center;
+        color: var(--color-invalid);
+    }
+
+    &__notSupported {
+        color: var(--color-disabled);
+    }
+}
