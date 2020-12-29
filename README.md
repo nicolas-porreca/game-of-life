@@ -37,3 +37,8 @@ Generation 3:
 The input is shown on screen, and can be tweaked at runtime.
 Some sample text files are provided in the `examples` folder.
 Enjoy!
+
+## Links
+
+-   [App](https://keen-benz-377ff6.netlify.app/) deployed on Netlify
+-   [Repository](https://github.com/nicolas-porreca/game-of-life) hosted on GitHub
