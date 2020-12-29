@@ -19,7 +19,9 @@ The initial state can be configured from the user interface, or provided via a t
 
 -   the current generation number
 -   the grid size
--   the population state (`*` represents a live cell, `.` represents a dead cell)
+-   the population state:
+    -   `*` represents a live cell
+    -   `.` represents a dead cell
 
 This is an example of input file specifying the third generation on a 4 by 8 grid:
 
